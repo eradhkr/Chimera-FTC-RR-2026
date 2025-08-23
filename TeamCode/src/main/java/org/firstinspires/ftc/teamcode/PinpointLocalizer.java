@@ -43,13 +43,15 @@ public final class PinpointLocalizer implements Localizer {
         driver = hardwareMap.get(GoBildaPinpointDriver.class, "pinpoint");
 
         double mmPerTick = inPerTick * 25.4;
-        driver.setEncoderResolution(1 / mmPerTick, DistanceUnit.MM);
-        //driver.setOffsets(mmPerTick * PARAMS.parYTicks, mmPerTick * PARAMS.perpXTicks, DistanceUnit.MM);
-        //double mmPerTick = 25.4 * inPerTick;
-        //driver.setEncoderResolution(1 / mmPerTick);
-        // TODO-Changed: Original Code was as follows
-       //  driver.setOffsets(mmPerTick * PARAMS.parYTicks, mmPerTick * PARAMS.perpXTicks);
 
+        // TODO-Changed: Original Code was as follows
+        //driver.setEncoderResolution(1 / mmPerTick);
+        //  driver.setOffsets(mmPerTick * PARAMS.parYTicks, mmPerTick * PARAMS.perpXTicks);
+        // TODO-Changed: New Incoming change from Fork Code was as follows
+        //double mmPerTick = 25.4 * inPerTick;
+        //driver.setOffsets(mmPerTick * PARAMS.parYTicks, mmPerTick * PARAMS.perpXTicks, DistanceUnit.MM);
+        // TODO-Changed: Accepted Incoming change from Fork Code as follows
+        driver.setEncoderResolution(1 / mmPerTick, DistanceUnit.MM);
 
         // TODO-New Values: Measured from the Center of the Robot
         // X_pod_offset = 0 mm from the center of the Robot
