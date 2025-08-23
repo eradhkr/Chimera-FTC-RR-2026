@@ -56,7 +56,7 @@ public final class PinpointLocalizer implements Localizer {
         // TODO-New Values: Measured from the Center of the Robot
         // X_pod_offset = 0 mm from the center of the Robot
         // Y_pod_offset = 6 inches = 152.4 mm from the center of the Robot.
-        driver.setOffsets(0, 152.4);
+        driver.setOffsets(0, 152.4, DistanceUnit.MM);
 
         // TODO-Changed: reverse encoder directions if needed
         // Parallel Dead Wheels(should increase forward)
